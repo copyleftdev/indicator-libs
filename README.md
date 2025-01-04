@@ -18,7 +18,8 @@ A **Go (Golang) library** of popular technical analysis indicators. This is a **
 12. [MFI (Money Flow Index)](#12-mfi-money-flow-index)  
 13. [Ultimate Oscillator (UO)](#13-ultimate-oscillator-uo)  
 14. [Ichimoku Kinko Hyo (Ichimoku Cloud)](#14-ichimoku-kinko-hyo-ichimoku-cloud)  
-15. [Parabolic SAR](#15-parabolic-sar)
+15. [Parabolic SAR](#15-parabolic-sar)  
+16. [Keltner Channels](#16-keltner-channels)
 
 ---
 
@@ -201,3 +202,18 @@ A **Go (Golang) library** of popular technical analysis indicators. This is a **
 - **Use Cases & Patterns**:  
   - **Trend-following** with automated trailing stops.  
   - Dots appear below price in an uptrend and above price in a downtrend; reversal triggers when price crosses the SAR level.
+
+---
+
+## 16. Keltner Channels
+
+- **Origin**: Based on work by Chester Keltner in the 1960s, later modified/popularized by Linda Bradford Raschke.  
+- **Description**: A volatility-based envelope indicator. The middle line is typically an EMA of typical price (High+Low+Close/3), and the upper/lower lines are offset by a multiple of ATR.  
+- **Common Parameters**:  
+  - `emaPeriod` for the middle line (e.g., 20).  
+  - `atrPeriod` (e.g., 10).  
+  - `mult` as a multiplier for the ATR offset (commonly around 2.0).  
+- **Use Cases & Patterns**:  
+  - **Volatility-based bands** that contract/expand with market moves.  
+  - Similar to Bollinger Bands but uses ATR instead of standard deviation.  
+  - Can signal breakouts when price strongly pierces the upper or lower channel.
