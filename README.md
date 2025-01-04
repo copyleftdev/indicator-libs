@@ -19,7 +19,8 @@ A **Go (Golang) library** of popular technical analysis indicators. This is a **
 13. [Ultimate Oscillator (UO)](#13-ultimate-oscillator-uo)  
 14. [Ichimoku Kinko Hyo (Ichimoku Cloud)](#14-ichimoku-kinko-hyo-ichimoku-cloud)  
 15. [Parabolic SAR](#15-parabolic-sar)  
-16. [Keltner Channels](#16-keltner-channels)
+16. [Keltner Channels](#16-keltner-channels)  
+17. [KAMA (Kaufman’s Adaptive Moving Average)](#17-kama-kaufmans-adaptive-moving-average)
 
 ---
 
@@ -217,3 +218,16 @@ A **Go (Golang) library** of popular technical analysis indicators. This is a **
   - **Volatility-based bands** that contract/expand with market moves.  
   - Similar to Bollinger Bands but uses ATR instead of standard deviation.  
   - Can signal breakouts when price strongly pierces the upper or lower channel.
+
+---
+
+## 17. KAMA (Kaufman’s Adaptive Moving Average)
+
+- **Origin**: Created by Perry J. Kaufman, introduced in his 1998 book *“Trading Systems and Methods”* (though developed earlier).  
+- **Description**: Adjusts the moving average's sensitivity based on market “noise” (volatility) vs. direction, resulting in less lag in trending markets and smoother lines during sideways action.  
+- **Common Parameters**:  
+  - `ERPeriod` for the efficiency ratio (e.g., 10).  
+  - `FastPeriod` (e.g., 2) and `SlowPeriod` (e.g., 30) for calculating adaptive smoothing constants.  
+- **Use Cases & Patterns**:  
+  - **Adaptive smoothing** that reduces whipsaws in choppy markets.  
+  - Reacts more quickly in strong trends, more slowly in sideways conditions.  
