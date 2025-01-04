@@ -17,7 +17,8 @@ A **Go (Golang) library** of popular technical analysis indicators. This is a **
 11. [OBV (On-Balance Volume)](#11-obv-on-balance-volume)  
 12. [MFI (Money Flow Index)](#12-mfi-money-flow-index)  
 13. [Ultimate Oscillator (UO)](#13-ultimate-oscillator-uo)  
-14. [Ichimoku Kinko Hyo (Ichimoku Cloud)](#14-ichimoku-kinko-hyo-ichimoku-cloud)
+14. [Ichimoku Kinko Hyo (Ichimoku Cloud)](#14-ichimoku-kinko-hyo-ichimoku-cloud)  
+15. [Parabolic SAR](#15-parabolic-sar)
 
 ---
 
@@ -186,4 +187,17 @@ A **Go (Golang) library** of popular technical analysis indicators. This is a **
 - **Use Cases & Patterns**:  
   - **Cloud** (Senkou Spans A & B) as support/resistance; bullish if price is above the cloud.  
   - **Tenkan–Kijun Cross** can signal short-term momentum changes.  
-  - **Chikou Span** lags, confirming trend if it’s above/below price.  
+  - **Chikou Span** lags, confirming trend if it’s above/below price.
+
+---
+
+## 15. Parabolic SAR
+
+- **Origin**: Developed by J. Welles Wilder Jr. in the late 1970s.  
+- **Description**: *Parabolic Stop and Reverse* (SAR) uses a “parabola” trailing price to highlight potential stop-loss levels and trend reversals.  
+- **Common Parameters**:  
+  - `accelerationFactor` (AF) starting value, often 0.02;  
+  - `accelerationMax` (e.g., 0.2).  
+- **Use Cases & Patterns**:  
+  - **Trend-following** with automated trailing stops.  
+  - Dots appear below price in an uptrend and above price in a downtrend; reversal triggers when price crosses the SAR level.
