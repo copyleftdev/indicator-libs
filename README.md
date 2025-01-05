@@ -20,7 +20,8 @@ A **Go (Golang) library** of popular technical analysis indicators. This is a **
 14. [Ichimoku Kinko Hyo (Ichimoku Cloud)](#14-ichimoku-kinko-hyo-ichimoku-cloud)  
 15. [Parabolic SAR](#15-parabolic-sar)  
 16. [Keltner Channels](#16-keltner-channels)  
-17. [KAMA (Kaufman’s Adaptive Moving Average)](#17-kama-kaufmans-adaptive-moving-average)
+17. [KAMA (Kaufman’s Adaptive Moving Average)](#17-kama-kaufmans-adaptive-moving-average)  
+18. [SuperTrend](#18-supertrend)
 
 ---
 
@@ -223,11 +224,24 @@ A **Go (Golang) library** of popular technical analysis indicators. This is a **
 
 ## 17. KAMA (Kaufman’s Adaptive Moving Average)
 
-- **Origin**: Created by Perry J. Kaufman, introduced in his 1998 book *“Trading Systems and Methods”* (though developed earlier).  
+- **Origin**: Created by Perry J. Kaufman, introduced in his 1998 book “Trading Systems and Methods” (though developed earlier).  
 - **Description**: Adjusts the moving average's sensitivity based on market “noise” (volatility) vs. direction, resulting in less lag in trending markets and smoother lines during sideways action.  
 - **Common Parameters**:  
   - `ERPeriod` for the efficiency ratio (e.g., 10).  
   - `FastPeriod` (e.g., 2) and `SlowPeriod` (e.g., 30) for calculating adaptive smoothing constants.  
 - **Use Cases & Patterns**:  
   - **Adaptive smoothing** that reduces whipsaws in choppy markets.  
-  - Reacts more quickly in strong trends, more slowly in sideways conditions.  
+  - Reacts more quickly in strong trends, more slowly in sideways conditions.
+
+---
+
+## 18. SuperTrend
+
+- **Origin**: A more recent innovation, popularized in the 2000s by various traders and widely used in algorithmic strategies.  
+- **Description**: Uses **ATR** to generate upper and lower trailing stops (“bands”). The indicator flips between uptrend and downtrend when price crosses these bands.  
+- **Common Parameters**:  
+  - `period` for ATR (e.g., 10 or 14).  
+  - `multiplier` (e.g., 3.0).  
+- **Use Cases & Patterns**:  
+  - **Trend detection**: SuperTrend line flips above/below price to signal bullish/bearish direction.  
+  - Serves as a **trailing stop** mechanism that adapts to volatility.  
