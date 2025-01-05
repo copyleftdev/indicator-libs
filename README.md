@@ -21,7 +21,8 @@ A **Go (Golang) library** of popular technical analysis indicators. This is a **
 15. [Parabolic SAR](#15-parabolic-sar)  
 16. [Keltner Channels](#16-keltner-channels)  
 17. [KAMA (Kaufman’s Adaptive Moving Average)](#17-kama-kaufmans-adaptive-moving-average)  
-18. [SuperTrend](#18-supertrend)
+18. [SuperTrend](#18-supertrend)  
+19. [T3 (Tillson’s T3 Moving Average)](#19-t3-tillsons-t3-moving-average)
 
 ---
 
@@ -244,4 +245,16 @@ A **Go (Golang) library** of popular technical analysis indicators. This is a **
   - `multiplier` (e.g., 3.0).  
 - **Use Cases & Patterns**:  
   - **Trend detection**: SuperTrend line flips above/below price to signal bullish/bearish direction.  
-  - Serves as a **trailing stop** mechanism that adapts to volatility.  
+  - Serves as a **trailing stop** mechanism that adapts to volatility.
+
+---
+
+## 19. T3 (Tillson’s T3 Moving Average)
+
+- **Origin**: Developed by Tim Tillson.  
+- **Description**: An advanced smoothing method that layers multiple EMAs internally and applies a “volume factor” to reduce lag while preserving smoothness.  
+- **Common Parameters**:  
+  - `period` (e.g., 14), `volumeFactor` (often 0.7).  
+- **Use Cases & Patterns**:  
+  - **Less lag** than a standard EMA, and can reduce whipsaws in sideways markets.  
+  - Tunable “volume factor” lets traders set how aggressively T3 reacts to price changes.
