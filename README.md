@@ -1,6 +1,6 @@
 # Indicator Libs
 
-A **Go (Golang) library** of popular technical analysis indicators. This is a **private** repository, providing a range of momentum and trend-based tools that can be integrated into quantitative trading or analysis workflows.
+A **Go (Golang) library** of popular technical analysis indicators. providing a range of momentum and trend-based tools that can be integrated into quantitative trading or analysis workflows.
 
 ## Table of Contents
 
